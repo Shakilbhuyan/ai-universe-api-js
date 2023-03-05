@@ -63,7 +63,43 @@ const loadAiDetails = async(id)=>{
     
 }
 const displayAiDetail = ai =>{
-console.log(ai);
+    console.log(ai);
+const modalBody =document.getElementById('ai-details');
+   modalBody.innerHTML = `
+   <div class="container d-flex justify-content-around">
+   <div>
+       <p></p>
+       <div class="d-flex justify-content-around">
+           <p></p>
+           <p></p>
+           <p></p>
+       </div>
+       <div class="d-flex justify-content-around">
+          <div>
+           <h1>Features</h1>
+           <ul>
+               <li></li>
+               <li></li>
+               <li></li>
+           </ul>
+          <div>
+           <h1>Integrations</h1>
+           <ul>
+               <li></li>
+               <li></li>
+               <li></li>
+           </ul>
+          </div>
+       </div>
+   </div>
+   <div>
+       <img src="" alt="">
+       <button></button>
+       <p></p>
+       <p></p>
+   </div>
+</div>
+   `;
 }
 
 
