@@ -31,7 +31,9 @@ else{
          </ol><hr>
       <p class="card-text fs-3 fw-bolder">${ai.name}.</p>
       <p><i class="fa-regular fa-calendar-days"></i> ${ai.published_in}</p>
-      <div class="mx-auto text-warning"><i class="fa-solid fa-arrow-right"></i></div>
+      <button type="button" class="border border-0 text-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+      <i class="fa-solid fa-arrow-right"></i>
+</button>
     </div>
   </div>
     `;
