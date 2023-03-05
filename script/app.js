@@ -2,20 +2,18 @@ const loadAiInfo = async()=>{
     const url = `https://openapi.programming-hero.com/api/ai/tools`;
     const res = await fetch(url);
     const data = await res.json();
-    displayAiInfo(data.data.tools);
+    displayAiInfo(data.data.tools.slice(0,6));
+   const showAllBtn = document.getElementById('show-all');
+   showAllBtn.addEventListener('click',function(){
+        displayAiInfo(data.data.tools);
+
+        showAllBtn.style.display ='none';
+    });
     console.log(data.data.tools);
-}
+};
+ 
 const displayAiInfo = ais =>{
-  const aiContainer = document.getElementById('ai-container');
-//   display only 6 card
-const showAll = document.getElementById('show-all');
-if(ais.length > 6){
-    ais = ais.slice(0,6);
-    showAll.classList.remove('d-none');
-}
-else{
-    showAll.classList.add('d-none')
-}
+    const aiContainer = document.getElementById('ai-container');
     // display all
   ais.forEach (ai => {
     const aiDiv = document.createElement('div');
