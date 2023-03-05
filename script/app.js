@@ -82,18 +82,19 @@ const modalBody =document.getElementById('ai-details');
                <li>${ai.features[2].feature_name ? ai.features[2].feature_name : 'no features'}</li>
                <li>${ai.features[3].feature_name ? ai.features[3].feature_name : 'no features'}</li>
            </ul>
+           </div>
           <div>
            <h1>Integrations</h1>
            <ul>
-               <li></li>
-               <li></li>
-               <li></li>
+               <li>${ai.integrations[0] ?ai.integrations[0] : 'no intregations'}</li>
+               <li>${ai.integrations[1] ?ai.integrations[1] : 'no intregations'}</li>
+               <li>${ai.integrations[2] ?ai.integrations[2] : 'no intregations'}</li>
            </ul>
           </div>
        </div>
    </div>
    <div>
-       <img src="" alt="">
+       <img class="img-fluid" src="${ai.logo}" alt="">
        <button></button>
        <p></p>
        <p></p>
