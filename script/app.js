@@ -67,20 +67,20 @@ const displayAiDetail = ai =>{
 const modalBody =document.getElementById('ai-details');
    modalBody.innerHTML = `
    <div class="container d-flex justify-content-around">
-   <div>
-       <p></p>
-       <div class="d-flex justify-content-around">
-           <p></p>
-           <p></p>
-           <p></p>
+   <div class ="border border-danger-subtle bg-warning-subtle">
+       <h3>${ai.description}</h3>
+       <div class="d-flex justify-content-around gap-2 ">
+           <p class="border border-danger-subtle">${ai.pricing[0].price ? ai.pricing[0].price : 'free of cost'} per ${ai.pricing[0].plan}</p>
+           <p class="border border-danger-subtle">${ai.pricing[1].price ? ai.pricing[1].price : 'free of cost'} per ${ai.pricing[1].plan}</p>
+           <p class="border border-danger-subtle">${ai.pricing[2].price ? ai.pricing[2].price : 'free of cost'} per ${ai.pricing[2].plan}</p>
        </div>
        <div class="d-flex justify-content-around">
           <div>
            <h1>Features</h1>
            <ul>
-               <li></li>
-               <li></li>
-               <li></li>
+               <li>${ai.features[1].feature_name ? ai.features[1].feature_name : 'no features'}</li>
+               <li>${ai.features[2].feature_name ? ai.features[2].feature_name : 'no features'}</li>
+               <li>${ai.features[3].feature_name ? ai.features[3].feature_name : 'no features'}</li>
            </ul>
           <div>
            <h1>Integrations</h1>
